@@ -1,6 +1,7 @@
 import java.util.*;
 import stack.StackArray;
 import linkedlist.*;
+import arrays.*;
 import trees.*;
 
 class Main {
@@ -38,5 +39,17 @@ class Main {
         InsertionAtEnd IaeInstance = new InsertionAtEnd();
         IaeInstance.input();
 
+        System.out.println("\nInserting at position");
+
+        // Inserting at position
+        InsertionAtPosition IapInstance = new InsertionAtPosition();
+        IapInstance.input();
+
+        System.out.println("\nARRAY PROBLEMS");
+
+        // Arrays
+        // Easy Problems
+        EasyProblems easyProblems = new EasyProblems();
+        easyProblems.Second_Largest_Problem();
     }
 }
