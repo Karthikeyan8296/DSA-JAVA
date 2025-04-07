@@ -20,6 +20,30 @@ public class EasyProblems {
                 secondMax = arr[i];
             }
         }
-        System.out.println("second largest is = " + secondMax);
+        System.out.println("second largest number is = " + secondMax);
+    }
+
+    public void Third_Largest_Problem() {
+        int arr[] = { 1, 14, 2, 16, 10, 20 };
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        int firstMax = Integer.MIN_VALUE;
+        int secondMax = Integer.MIN_VALUE;
+        int thirdMax = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > firstMax) {
+                thirdMax = secondMax;
+                secondMax = firstMax;
+                firstMax = arr[i];
+            } else if (arr[i] != firstMax && arr[i] > secondMax) {
+                thirdMax = secondMax;
+                secondMax = arr[i];
+            } else if (arr[i] != secondMax && arr[i] != firstMax && arr[i] > thirdMax) {
+                thirdMax = arr[i];
+            }
+        }
+        System.out.println("third largest number is = " + thirdMax);
     }
 }
