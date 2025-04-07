@@ -52,5 +52,6 @@ class Main {
         EasyProblems easyProblems = new EasyProblems();
         easyProblems.Second_Largest_Problem();
         easyProblems.Third_Largest_Problem();
+        easyProblems.MaxProductOfTriplet();
     }
 }
