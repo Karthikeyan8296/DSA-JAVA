@@ -135,5 +135,39 @@ public class EasyProblems {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+
+        System.out.println();
+    }
+
+    // Reverse Array in Group
+    public void ReverseGroup() {
+        int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int k = 3;
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        // interating the loop with the Kth values
+        for (int i = 0; i < arr.length; i = i + k) {
+
+            // finding the start and end of the sub arrays
+            int start = i;
+            int end = Math.min(i + k - 1, arr.length - 1);
+
+            // normal reverse method
+            while (start <= end) {
+                int temp = arr[start];
+                arr[start] = arr[end];
+                arr[end] = temp;
+                start++;
+                end--;
+            }
+        }
+
+        System.out.print("Reverse Group using Kth values = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }

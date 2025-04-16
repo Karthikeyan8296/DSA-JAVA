@@ -56,5 +56,6 @@ class Main {
         easyProblems.MaximumProduct();
         easyProblems.MaxConsecutives();
         easyProblems.MoveAllZero();
+        easyProblems.ReverseGroup();
     }
 }
