@@ -53,5 +53,8 @@ class Main {
         easyProblems.Second_Largest_Problem();
         easyProblems.Third_Largest_Problem();
         easyProblems.MaxProductOfTriplet();
+        easyProblems.MaximumProduct();
+        easyProblems.MaxConsecutives();
+        easyProblems.MoveAllZero();
     }
 }

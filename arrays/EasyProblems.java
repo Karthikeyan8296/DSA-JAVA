@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class EasyProblems {
 
     public void Second_Largest_Problem() {
@@ -50,7 +52,7 @@ public class EasyProblems {
     // Maximum product of a triplet (subsequence of size 3) in array
     // ThreeGreatCondidates
     public void MaxProductOfTriplet() {
-        int arr[] = { -10, -3, -5, -6, -20 };
+        int arr[] = { 1000, 1000, 1000 };
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
@@ -62,13 +64,76 @@ public class EasyProblems {
                 thirdMax = secondMax;
                 secondMax = firstMax;
                 firstMax = arr[i];
-            } else if (arr[i] != firstMax && arr[i] > secondMax) {
+            } else if (arr[i] > secondMax) {
                 thirdMax = secondMax;
                 secondMax = arr[i];
-            } else if (arr[i] != secondMax && arr[i] != firstMax && arr[i] > thirdMax) {
+            } else if (arr[i] > thirdMax) {
                 thirdMax = arr[i];
             }
         }
         System.out.println("Three Great Candidates is = " + firstMax * secondMax * thirdMax);
+    }
+
+    // Maximum product of three numbers
+    public void MaximumProduct() {
+        int nums[] = { 1000, 1000, 1000 };
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+        Arrays.sort(nums);
+        int len = nums.length;
+
+        int prod1 = nums[len - 1] * nums[len - 2] * nums[len - 3];
+        int prod2 = nums[0] * nums[1] * nums[len - 1];
+
+        System.out.println("Maximum product of three numbers = " + Math.max(prod1, prod2));
+    }
+
+    // Maximum consecutive one's - 1
+    public void MaxConsecutives() {
+        int nums[] = { 1, 0, 0, 1, 1, 1, 0 };
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
+
+        int count = 0;
+        int maxCount = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
+                count++;
+                maxCount = Math.max(maxCount, count);
+            } else {
+                count = 0;
+            }
+        }
+        System.out.println("Maximum consecutive one's = " + Math.max(count, maxCount));
+    }
+
+    // Moving all Zero's to end
+    public void MoveAllZero() {
+        int arr[] = { 3, 0, 12, 0, 0, 5, 0, 1 };
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        int index = 0; // index value is used to align the non zero and zero values
+
+        // taking all the non-zeros and moving it to the first
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr[index++] = arr[i];
+            }
+        }
+
+        // after the non-zero values, filling the array with 0's
+        while (index < arr.length) {
+            arr[index++] = 0;
+        }
+
+        System.out.print("Move all Zeros To End = ");
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
