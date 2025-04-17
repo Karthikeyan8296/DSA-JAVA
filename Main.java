@@ -61,5 +61,6 @@ class Main {
         easyProblems.rightRotation();
         easyProblems.leftRotationKthValue();
         easyProblems.rightRoatationKthValue();
+        easyProblems.waveArray();
     }
 }

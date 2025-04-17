@@ -261,5 +261,30 @@ public class EasyProblems {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
+    }
+
+    void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+
+    public void waveArray() {
+        int arr[] = { 10, 5, 6, 3, 2, 20, 100, 80 };
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        // Wave Array swap
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length - 1; i += 2) {
+            swap(arr, i, i + 1);
+        }
+
+        System.out.print("Wave Array = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
