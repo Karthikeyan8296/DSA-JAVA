@@ -57,5 +57,9 @@ class Main {
         easyProblems.MaxConsecutives();
         easyProblems.MoveAllZero();
         easyProblems.ReverseGroup();
+        easyProblems.leftRotation();
+        easyProblems.rightRotation();
+        easyProblems.leftRotationKthValue();
+        easyProblems.rightRoatationKthValue();
     }
 }

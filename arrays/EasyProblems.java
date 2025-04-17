@@ -169,5 +169,97 @@ public class EasyProblems {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
+    }
+
+    // left Rotation
+    public void leftRotation() {
+        int arr[] = { 1, 2, 3, 4, 5 };
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        int first = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            arr[i - 1] = arr[i]; // Array becomes [2, 3, 4, 5, 5]
+        }
+        arr[arr.length - 1] = first;
+
+        System.out.print("Left Rotation by 1 = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println();
+    }
+
+    // right Rotation
+    public void rightRotation() {
+        int arr[] = { 1, 2, 3, 4, 5 };
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        int last = arr[arr.length - 1];
+        for (int i = arr.length - 1; i >= 1; i--) {
+            arr[i] = arr[i - 1]; // Array becomes [1, 1, 2, 3, 4]
+        }
+        arr[0] = last;
+
+        System.out.print("Rigth Rotation by 1 = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        System.out.println();
+    }
+
+    // Left Rotation by Kth values
+    public void leftRotationKthValue() {
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int k = 2;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        for (int index = 0; index < k; index++) {
+            int first = arr[0];
+
+            for (int i = 1; i < arr.length; i++) {
+                arr[i - 1] = arr[i];
+            }
+            arr[arr.length - 1] = first;
+        }
+
+        System.out.print("Left Rotation by Kth Value = ");
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    // Right Rotation by Kth Values
+    public void rightRoatationKthValue() {
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int k = 2;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        for (int index = 0; index < k; index++) {
+            int last = arr[arr.length - 1];
+
+            for (int i = arr.length - 1; i >= 1; i--) {
+                arr[i] = arr[i - 1];
+            }
+
+            arr[0] = last;
+        }
+
+        System.out.print("Right Rotation by Kth Value = ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
     }
 }
