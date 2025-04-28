@@ -62,5 +62,8 @@ class Main {
         easyProblems.leftRotationKthValue();
         easyProblems.rightRoatationKthValue();
         easyProblems.waveArray();
+        // plus one
+        int[] result = easyProblems.plusOne();
+        System.out.println("PlusOne = " + Arrays.toString(result));
     }
 }

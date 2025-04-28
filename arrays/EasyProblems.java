@@ -270,6 +270,7 @@ public class EasyProblems {
         arr[b] = temp;
     }
 
+    // Wave Array problem
     public void waveArray() {
         int arr[] = { 10, 5, 6, 3, 2, 20, 100, 80 };
         for (int i = 0; i < arr.length; i++) {
@@ -286,5 +287,27 @@ public class EasyProblems {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
+    }
+
+    // Plus one problem
+    public int[] plusOne() {
+        int arr[] = { 9, 9 };
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] < 9) {
+                arr[i]++;
+                return arr; // done
+            } else {
+                arr[i] = 0; // if 9 make it as 0
+            }
+        }
+
+        int[] newDigit = new int[arr.length + 1];
+        newDigit[0] = 1; // add 1 at the start
+        return newDigit;
     }
 }
