@@ -310,4 +310,47 @@ public class EasyProblems {
         newDigit[0] = 1; // add 1 at the start
         return newDigit;
     }
+
+    // Linear Search
+    public void linearSeacrh() {
+        int arr[] = { 1, 2, 3, 4, 5 };
+        int num = 6;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        int flag = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == num) {
+                System.out.print("Element found at index = " + i);
+                flag = 1;
+                break;
+            }
+        }
+
+        if (flag == 0) {
+            System.out.print("Element not found = " + -1);
+        }
+        System.out.println();
+    }
+
+    // 2SumProblem
+    public int[] TwoSumProblem() {
+        int arr[] = { 2, 7, 11, 15 };
+        int target = 9;
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+
+        // logic
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                    return new int[] { i, j };
+                }
+            }
+        }
+        return new int[] {};
+    }
 }

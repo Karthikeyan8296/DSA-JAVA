@@ -62,8 +62,12 @@ class Main {
         easyProblems.leftRotationKthValue();
         easyProblems.rightRoatationKthValue();
         easyProblems.waveArray();
-        // plus one
+        // plusOne Problem
         int[] result = easyProblems.plusOne();
         System.out.println("PlusOne = " + Arrays.toString(result));
+        easyProblems.linearSeacrh();
+        // twoSum Problem
+        int[] value = easyProblems.TwoSumProblem();
+        System.out.println("TwoSum Problem " + Arrays.toString(value));
     }
 }
